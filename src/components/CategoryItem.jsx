@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-undef */
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
@@ -8,37 +7,42 @@ const Container = styled.div`
   height: 70vh;
   position: relative;
 `;
+
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  ${mobile({ height: "30vh" })}
+  ${mobile({ height: "20vh" })}
+
 `;
+
 const Info = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
+
 const Title = styled.h1`
-  color: white;
-  margin-bottom: 20px;
+    color:white;
+    margin-bottom: 20px;
 `;
+
 const Button = styled.button`
-  border: none;
-  padding: 10px;
-  background-color: white;
-
-  cursor: pointer;
-  font-weight: 600;
+    border:none;
+    padding: 10px;
+    background-color: white;
+    color:gray;
+    cursor: pointer;
+    font-weight: 600;
 `;
 
-export default function CategoryItem({ item }) {
+const CategoryItem = ({ item }) => {
   return (
     <Container>
       <Image src={item.img} />
@@ -48,4 +52,6 @@ export default function CategoryItem({ item }) {
       </Info>
     </Container>
   );
-}
+};
+
+export default CategoryItem;

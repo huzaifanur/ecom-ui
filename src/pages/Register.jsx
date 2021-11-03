@@ -17,8 +17,8 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 20px;
   width: 40%;
+  padding: 20px;
   background-color: white;
   ${mobile({ width: "75%" })}
 `;
@@ -36,7 +36,7 @@ const Form = styled.form`
 const Input = styled.input`
   flex: 1;
   min-width: 40%;
-  margin: 20px 10px 0 0;
+  margin: 20px 10px 0px 0px;
   padding: 10px;
 `;
 
@@ -50,28 +50,31 @@ const Button = styled.button`
   border: none;
   padding: 15px 20px;
   background-color: teal;
+  color: white;
   cursor: pointer;
 `;
 
-export default function Register() {
+const Register = () => {
   return (
     <Container>
       <Wrapper>
-        <Title> CREATE AN ACCOUNT</Title>
+        <Title>CREATE AN ACCOUNT</Title>
         <Form>
-          <Input placeholder="name"></Input>
-          <Input placeholder="last name"></Input>
-          <Input placeholder="username"></Input>
-          <Input placeholder="email"></Input>
-          <Input placeholder="password"></Input>
-          <Input placeholder="confirm password"></Input>
+          <Input placeholder="name" />
+          <Input placeholder="last name" />
+          <Input placeholder="username" />
+          <Input placeholder="email" />
+          <Input placeholder="password" />
+          <Input placeholder="confirm password" />
           <Agreement>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
-            fugiat?
+            By creating an account, I consent to the processing of my personal
+            data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
-          <Button>REGISTER</Button>
+          <Button>CREATE</Button>
         </Form>
       </Wrapper>
     </Container>
   );
-}
+};
+
+export default Register;
